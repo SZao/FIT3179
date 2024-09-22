@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   "title": "GDP Per Capita in 2023 (in USD)",
+   "width": 800,
+   "height": 400,
+   "data": {
+     "url": "https://raw.githubusercontent.com/SZao/FIT3179/master/world_map.json",
+     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+   },
+   "projection": {"type": "equalEarth"},
+   "layer": [
+     {
+       "transform": [
+         {
+           "calculate": "'Data is not available in ' + datum.properties.NAME",
+           "as": "note"
+         }
+       ],
+       "mark": {"type": "geoshape", "fill": "lightgrey", "stroke": "white"},
+       "encoding": {"tooltip": {"field": "note"}}
+     },
+     {
+       "data": {
+         "url": "https://raw.githubusercontent.com/SZao/FIT3179/refs/heads/master/ocean.json",
+         "format": {"type": "topojson", "feature": "oceans"}
+       },
+       "mark": {"type": "geoshape", "fill": "skyblue"}
+     },
+     {
+       "data": {
+         "url": "https://raw.githubusercontent.com/SZao/FIT3179/master/world_map.json",
+         "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+       },
+       "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+     },
+     {
+       "transform": [
+         {
+           "lookup": "properties.NAME",
+           "from": {
+             "data": {
+               "url": "https://raw.githubusercontent.com/SZao/FIT3179/refs/heads/master/data/GDP.csv"
+             },
+             "key": "Country Name",
+             "fields": ["GDP"]
+           }
+         },
+         {
+           "calculate": "datum.GDP === null ? 'No Data' : datum.GDP",
+                     "as": "GDP_Status"
+         }
+       ],
+       "mark": {"type": "geoshape", "stroke": "white"},
+       "encoding": {
+         "color": {
+           "field": "GDP_Status",
+           "type": "quantitative",
+           "scale": {
+             "type": "log",
+             "domain": [500,90000],
+             "scheme": "greens"
+           },
+           "title": "GDP (in USD)"
+         },
+         "tooltip": [
+           {
+             "field": "properties.NAME",
+             "type": "nominal",
+             "title": "Country Name"
+           },
+           {
+             "field": "GDP_Status",
+             "type": "quantitative",
+             "title": "GDP (in USD)",
+             "format": ",.0f"
+           }
+         ]
+       }
+     }
+   ],
+   "config": {}
+  }
