@@ -22,7 +22,7 @@ Burkina Faso,874.121280381345
 Bangladesh,2529.08012688018
 Bulgaria,15797.5955773596
 Bahrain,29084.3071297448
-"Bahamas, The",34749.6382896736
+Bahamas,34749.6382896736
 Bosnia and Herzegovina,8426.09111019155
 Belarus,7829.05313660622
 Belize,7987.58595509037
@@ -39,7 +39,7 @@ Central Europe and the Baltics,22494.4806637564
 Switzerland,99994.9380204786
 Channel Islands,Null
 Chile,17093.2419713921
-Chinaaaa,12614.0609948923
+China,12614.0609948923
 Cote d'Ivoire,2728.80324620071
 Cameroon,1673.64888857222
 "Congo, Dem. Rep.",649.143987939358
@@ -66,7 +66,7 @@ East Asia & Pacific,12927.6838082962
 Europe & Central Asia (excluding high income),8479.05683108165
 Europe & Central Asia,29483.4414501406
 Ecuador,6533.35150400616
-"Egypt, Arab Rep.",3512.58006529798
+Egypt,3512.58006529798
 Euro area,44368.5755448892
 Eritrea,Null
 Spain,32676.9837109377
@@ -85,7 +85,7 @@ Georgia,8120.36344318242
 Ghana,2238.15802077213
 Gibraltar,Null
 Guinea,1663.93780748118
-"Gambia, The",843.765742570282
+Gambia,843.765742570282
 Guinea-Bissau,914.275153804104
 Equatorial Guinea,7066.61659257734
 Greece,22990.0135680461
@@ -111,7 +111,7 @@ Isle of Man,Null
 India,2484.8454294403
 Not classified,Null
 Ireland,103684.880801837
-"Iran, Islamic Rep.",4502.5463291805
+Iran,4502.5463291805
 Iraq,5512.47571978422
 Iceland,78811.0583922693
 Israel,52261.6761509633
@@ -124,15 +124,15 @@ Kenya,1949.89896909713
 Kyrgyz Republic,1969.86648107793
 Cambodia,1875.07148192948
 Kiribati,2089.91016071918
-St. Kitts and Nevis,22553.3056457148
-"Korea, Rep.",33121.3712885508
+Saint Kitts and Nevis,22553.3056457148
+"Korea, South",33121.3712885508
 Kuwait,37533.2177177327
 Latin America & Caribbean (excluding high income),10070.4433755923
-Lao PDR,2075.40141406441
+Laos,2075.40141406441
 Lebanon,Null
 Liberia,799.501400511629
 Libya,7329.97654106843
-St. Lucia,13980.0940828315
+Saint Lucia,13980.0940828315
 Latin America & Caribbean,10681.7330935615
 Least developed countries: UN classification,1307.65017453078
 Low income,894.622389496696
@@ -201,7 +201,7 @@ Post-demographic dividend,53464.0015221955
 French Polynesia,Null
 Qatar,Null
 Romania,18419.4187120644
-Russian Federation,13817.0458984375
+Russia,13817.0458984375
 Rwanda,1000.21892281433
 South Asia,2308.71977654436
 Saudi Arabia,28894.963351808
@@ -250,10 +250,10 @@ Uganda,1014.21397773156
 Ukraine,5181.36279296875
 Upper middle income,10461.7526167701
 Uruguay,22564.5324620687
-United States,81695.1870713305
+United States of America,81695.1870713305
 Uzbekistan,2496.10775758036
-St. Vincent and the Grenadines,10279.4939435955
-"Venezuela, RB",Null
+Saint Vincent and the Grenadines,10279.4939435955
+Venezuela,Null
 British Virgin Islands,Null
 Virgin Islands (U.S.),Null
 Viet Nam,4346.76849237821
@@ -261,7 +261,7 @@ Vanuatu,3367.09463871866
 World,13138.3275456864
 Samoa,4139.02958723
 Kosovo,5943.12571420876
-"Yemen, Rep.",533.367123496464
+Yemen,533.367123496464
 South Africa,6253.16161272014
 Zambia,1369.12936484937
 Zimbabwe,1592.41657368542
