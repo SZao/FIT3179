@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #e0f7fa; /* Light blue background */
+}
+
+h1 {
+    text-align: center; /* Center the main title */
+    color: black; /* Dark teal color for the title */
+    margin-bottom: 20px; /* Space below the title */
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.chart {
+   
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .chart, .text {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
