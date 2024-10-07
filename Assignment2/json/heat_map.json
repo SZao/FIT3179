@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Interstate Domestic Overnight Travel Trends",
+  "data": {"url": "https://raw.githubusercontent.com/SZao/FIT3179/refs/heads/main/Assignment2/data/Monthly%20domestic%20overnight%20travel.csv"},
+  "params": [
+    {
+      "name": "Year_filter",
+      "value": "2023",  
+      "bind": {
+        "input": "select",
+        "options": ["2022", "2023"],
+        "labels": ["2022", "2023"],
+        "name": "Year: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.Year == Year_filter"
+    }
+  ],
+  "mark": "rect",
+  "encoding": {
+    "y": {
+      "field": "State",
+      "type": "nominal"
+    },
+    "x": {
+      "field": "Month",
+      "type": "ordinal",
+      "title": "Month",
+      "sort": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] 
+    },
+    "color": {
+      "field": "Interstate",
+      "type": "quantitative",
+      "scale": {
+        "domain": [50, 1000], 
+        "range": ["#f0f8ff", "#0000ff"] 
+      },
+      "legend": {
+        "title": "Quantity of Visits"
+      }
+    },
+    "tooltip": [
+      {"field": "State", "type": "nominal", "title": "State"},
+      {"field": "Interstate", "type": "quantitative", "title": "Number of Visits","format":",.0f"}
+    ]
+  },
+  "config": {
+    "axis": {
+      "grid": true,
+      "tickBand": "extent"
+    }
+  }
+}
