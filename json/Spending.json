@@ -52,7 +52,7 @@
             "type": "nominal",
             "scale": {
                 "domain": ["Business", "Education", "Employment", "Holiday", "Other Reason", "Visiting friends and relatives"],
-                "range": ["orange", "purple", "grey", "darkblue", "yellow", "green"]
+                "range": ["#99B898", "#E84A5F", "#F7DB4F", "#2A363B ", "#FECEAB", "#FF847C"]
             },
             "legend": {"title": "Purpose"}
         },

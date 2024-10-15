@@ -18,18 +18,8 @@
           "type": "ordinal",
           "title": "Month",
           "sort": [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"
+            "January", "February", "March", "April", "May", "June", 
+            "July", "August", "September", "October", "November", "December"
           ]
         },
         "y": {
@@ -37,14 +27,15 @@
           "field": "Number",
           "title": "Number of Flights"
         },
-        "color": {"field": "State", "scale": {"scheme": "tableau20"}},
+        "color": {
+          "field": "State",
+          "scale": {
+            "range": ["#FDC094", "#5E72EB", "#120C6E", "#FF9190", "#0B0742"]
+          }
+        },
         "tooltip": [
           {"field": "Month", "type": "ordinal", "title": "Month"},
-          {
-            "field": "Number",
-            "type": "quantitative",
-            "title": "Number of Flights"
-          },
+          {"field": "Number", "type": "quantitative", "title": "Number of Flights"},
           {"field": "State", "type": "nominal", "title": "State"}
         ]
       }
@@ -75,7 +66,7 @@
           "field": "Country of Residence",
           "type": "nominal",
           "axis": {"labelAngle": 45},
-          "title":"Country"
+          "title": "Country"
         },
         "y": {
           "field": "Visitors",
@@ -84,11 +75,7 @@
         },
         "text": {"field": "flagEmoji", "type": "nominal"},
         "tooltip": [
-          {
-            "field": "Country of Residence",
-            "type": "nominal",
-            "title": "Country"
-          },
+          {"field": "Country of Residence", "type": "nominal", "title": "Country"},
           {"field": "Visitors", "type": "quantitative", "title": "Visitors"},
           {"field": "Year", "type": "nominal", "title": "Year"}
         ]

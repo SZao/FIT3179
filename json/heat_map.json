@@ -36,7 +36,7 @@
       "field": "Interstate",
       "type": "quantitative",
       "scale": {
-        "domain": [50,1000], 
+        "domain": [30,1200], 
         "range": ["#f0f8ff", "#0000ff"] 
       },
       "legend": {

@@ -200,9 +200,9 @@
         </div>
     </div>
 
-    <div class="container_last">
+    <div class="container_map">
         <!-- First chart -->
-        <div class="last_chart">
+        <div class="map">
             <div class="text">
                 <h2>Comparison of Business Counts by Industry in 2019 and 2021</h2>
                 <p>Diverging bar chartillustrates the <strong>change in the number of businesses <br>
@@ -218,24 +218,31 @@
                     which sectors experienced growth or reduction, offering a snapshot <br>
                     of the changing business landscape during this time..</p>
             </div>
-            <div id="diverging_bar" class="last_chart"></div>
+            <div id="diverging_bar" class="map_chart"></div>
         </div>
 
         <!-- Second chart ) -->
-        <div class="last_chart">
+        <div class="map">
             <div class="text">
-                <h2>Number of Visit in each State by Domestic Tourist in 2023</h2>
-                <p><strong>Choropleth Map visualizes the number of domestic visitors</strong> to each state <br>
-                    in Australia for the year 2023. <br>
-                    This map allows for an easy comparison of tourism activity <br>between different regions,
-                    helping to identify popular domestic travel destinations <br>and areas with lower visitation.
-                    It serves as a valuable tool <br>for understanding trends in domestic tourism and can guide
-                    <br>future travel
-                    promotions
-                    and infrastructure planning.</p>
+                <h2>Tourism GDP Growth in Australia (2015-2023)</h2>
+                <p>This chart illustrates <strong>the annual growth of Australia's tourism GDP 
+                    from 2015-16 to 2022-23</strong>. Tourism is a significant contributor to <br>
+                    the country's economy, and this chart highlights its fluctuating impact <br>
+                    over the years. By visualizing the revenue from tourism, <br>
+                    the chart emphasizes how the sector plays a crucial role <br>
+                    in supporting economic stability and growth. Interactive features allow users to <br>
+                    examine the trends and better understand tourism's influence on Australia's 
+                    <br>overall GDP.<br>
+                <strong>The line chart below is used to interactively filter <br>
+                and highlight specific sections of the area chart.</strong></p>
             </div>
-            <div id="domestic_map" class="last_chart"></div>
+            <div id="multi_graph" class="map_chart"></div>
         </div>
+    </div>
+
+    <div class="author-info"></div>
+        <p><strong>Author:</strong> Swee Zao Yong</p>
+        <p><strong>Data Source:</strong> Tourism Research Australia, Australian Bureau of Statistics (ABS), and data.gov.au</p>
     </div>
     
     
@@ -251,6 +258,7 @@
         var combineChart = "json/combine_chart.json";
         var bubbleChart = "json/bubble_chart.json";
         var divergingBar = "json/diverging_bar.json";
+        var multiGraph = "json/multi_graph.json";
         // Embedding each chart
         vegaEmbed('#spending', spendingSpec).catch(console.error);
         vegaEmbed('#dot_range', dotRangeSpec).catch(console.error);
@@ -381,10 +389,14 @@
                 }).catch(console.error);
             });
         });
-    
+
+
+      
     
         vegaEmbed('#bubble_chart', bubbleChart).catch(console.error);
         vegaEmbed("#diverging_bar", divergingBar).catch(console.error);
+        vegaEmbed("#multi_graph", multiGraph).catch(console.error);
+
 
 
     </script>

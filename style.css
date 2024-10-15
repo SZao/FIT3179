@@ -10,7 +10,7 @@ h1 {
     text-align: center; /* Center the main title */
     color: white; /* Dark teal color for the title */
     margin-bottom: 20px; /* Space below the title */
-    font-size: 100px ;
+    font-size: 110px ;
     font-family:Georgia, 'Times New Roman', Times, serif;
     background-image: url(../image/background1.jpg);
     padding: 100px 0;
@@ -171,11 +171,6 @@ h1 {
   height: 400px; /* Adjust height as necessary for the charts */
 }
 
-/* Hover effect on the map/chart */
-.concate_chart:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  transition: transform 0.3s ease;
-}
 
 
 .container4 {
@@ -184,7 +179,6 @@ h1 {
   gap: 10px; /* Add space between pairs */
 
   display: flex;
-  margin: 20px;
   background-color: #FBFAF0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -223,4 +217,16 @@ h1 {
 .bubble_chart:hover {
   transform: scale(1.05); /* Slight zoom effect */
   transition: transform 0.3s ease;
+}
+
+
+.author-info {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+.author-info p {
+  margin: 5px 0;
+
 }
