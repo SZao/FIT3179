@@ -1,4 +1,4 @@
-State/Territory,Trips(thousand),Spending($mil),Month,Year
+State/Territory,Trips,Spending,Month,Year
 Sydney,644,632,January,2022
 Regional NSW,"2,631","2,158",January,2022
 NSW,"3,169","2,790",January,2022

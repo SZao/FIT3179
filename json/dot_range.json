@@ -1,35 +1,14 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A ranged dot plot that uses 'layer' to convey changing life expectancy for the five most populous countries (between 1955 and 2000).",
-    "data": {"url": "https://raw.githubusercontent.com/SZao/FIT3179/refs/heads/main/Assignment2/data/Monthly%20domestic%20overnight%20travel.csv"},
+    "width":350,
+    "height":350,
+    "data": {"url": "https://raw.githubusercontent.com/SZao/FIT3179/refs/heads/master/data/Monthly%20domestic%20overnight%20travel.csv"},
     "params": [
         {
             "name": "State_selection",
-            "bind": {
-                "input": "select",
-                "value": "New South Wales",
-                "options": [
-                    "New South Wales",
-                    "Victoria",
-                    "Queensland",
-                    "South Australia",
-                    "Western Australia",
-                    "Tasmania",
-                    "Northern Territory",
-                    "Australian Capital Territory"
-                ],
-                "labels": [
-                    "New South Wales",
-                    "Victoria",
-                    "Queensland",
-                    "South Australia",
-                    "Western Australia",
-                    "Tasmania",
-                    "Northern Territory",
-                    "Australian Capital Territory"
-                ],
-                "name": "State Selection: "
-            }
+            "value": "New South Wales"
+            
         }
     ],
     "transform": [
@@ -52,12 +31,13 @@
         {
             "filter": "datum.State == State_selection"
         }
+        
     ],
     "encoding": {
         "x": {
             "field": "Intrastate",
             "type": "quantitative",
-            "title": "Intrastate"
+            "title": "Number of Tourist"
         },
         "y": {
             "field": "Month",
@@ -68,7 +48,9 @@
                 "ticks": false,
                 "minExtent": 70,
                 "domain": false
-            }
+            },
+            "sort": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] 
+
         }
     },
     "layer": [
@@ -85,7 +67,7 @@
                 "tooltip": [
                     {"field": "Month", "title": "Month"},
                     {"field": "Year", "title": "Year"},
-                    {"field": "Intrastate", "title": "Intrastate"}
+                    {"field": "Intrastate", "title": "Number of Tourist"}
                 ]
             }
         },
@@ -113,7 +95,8 @@
                 "tooltip": [
                     {"field": "Month", "title": "Month"},
                     {"field": "Year", "title": "Year"},
-                    {"field": "Intrastate", "title": "Number of Visits","format":",.0f"}
+                    {"field": "State", "title": "State"},
+                    {"field": "Intrastate", "title": "Number of Tourist","format":",.0f"}
                 ]
             }
         }

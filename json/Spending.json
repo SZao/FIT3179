@@ -1,8 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "International Travel Insights: Spending Trends by Purpose ",
-    "width": 600,
-    "height": 500,
+    "width": 400,
+    "height": 400,
+    "background": "transparent",  
+    "view": {
+        "stroke": "transparent"  
+    },
     "data": {"url": "https://raw.githubusercontent.com/SZao/FIT3179/refs/heads/main/Assignment2/data/International_travel_spending.csv"},
     "params": [
         {
@@ -26,14 +29,14 @@
             "mark": {
                 "type": "arc",
                 "innerRadius": 20,
-                "stroke": "#fff"
+                "stroke":"white"
             }
         },
         {
             "mark": {
                 "type": "text",
-                "radiusOffset": 23,
-                "fontSize": 11,
+                "radiusOffset": 30,
+                "fontSize": 13,
                 "fill": "black"
             },
             "encoding": {
@@ -44,7 +47,15 @@
     "encoding": {
         "theta": {"field": "Spending", "type": "quantitative", "stack": true},
         "radius": {"field": "Spending", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
-        "color": {"field": "Purpose", "type": "nominal"},
+        "color": {
+            "field": "Purpose",
+            "type": "nominal",
+            "scale": {
+                "domain": ["Business", "Education", "Employment", "Holiday", "Other Reason", "Visiting friends and relatives"],
+                "range": ["orange", "purple", "grey", "darkblue", "yellow", "green"]
+            },
+            "legend": {"title": "Purpose"}
+        },
         "tooltip": [
             {"field": "Purpose", "type": "nominal", "title": "Purpose"},
             {"field": "Spending", "type": "quantitative", "title": "Spending","format": "$,.0f"},

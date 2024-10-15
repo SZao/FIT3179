@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Interstate Domestic Overnight Travel Trends",
-  "data": {"url": "https://raw.githubusercontent.com/SZao/FIT3179/refs/heads/main/Assignment2/data/Monthly%20domestic%20overnight%20travel.csv"},
+  "width":480,
+  "height":350,
+  "data": {"url": "https://raw.githubusercontent.com/SZao/FIT3179/refs/heads/master/data/Monthly%20domestic%20overnight%20travel.csv"},
   "params": [
     {
       "name": "Year_filter",
@@ -35,16 +36,16 @@
       "field": "Interstate",
       "type": "quantitative",
       "scale": {
-        "domain": [50, 1000], 
+        "domain": [50,1000], 
         "range": ["#f0f8ff", "#0000ff"] 
       },
       "legend": {
-        "title": "Quantity of Visits"
+        "title": "Quantity of Tourists"
       }
     },
     "tooltip": [
       {"field": "State", "type": "nominal", "title": "State"},
-      {"field": "Interstate", "type": "quantitative", "title": "Number of Visits","format":",.0f"}
+      {"field": "Interstate", "type": "quantitative", "title": "Number of Tourists","format":",.0f"}
     ]
   },
   "config": {
